@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- ナビゲーションバー -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">ブログ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">ホーム</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">記事</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">連絡先</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヘッダー -->
+  <header class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">ようこそ！</h1>
+      <p class="lead">ブログのトップページへようこそ。</p>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>最新の記事</h2>
+        <div class="card mb-3">
+          <img src="https://placeimg.com/600/300/nature" class="card-img-top" alt="記事のイメージ">
+          <div class="card-body">
+            <h5 class="card-title">記事のタイトル</h5>
+            <p class="card-text">記事の要約や説明などがここに入ります。</p>
+            <a href="#" class="btn btn-primary">詳細を読む</a>
+          </div>
+        </div>
+        <!-- 他の記事もここに追加 -->
+      </div>
+      <div class="col-md-4">
+        <h2>カテゴリー</h2>
+        <ul class="list-group">
+          <li class="list-group-item">カテゴリー1</li>
+          <li class="list-group-item">カテゴリー2</li>
+          <li class="list-group-item">カテゴリー3</li>
+          <!-- 他のカテゴリーもここに追加 -->
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-light text-center py-3">
+    <p>© 2023 ブログ. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
