@@ -7,7 +7,6 @@
     <div class="card-header">{{ book.title }}</div>
     <div class="card-body">
       <p class="card-text">{{ book.text }}</p>
-      <div><img src="{{ book.thumbnail.url }}" class="img-thumbnail"/></div>
       <a href="{% url 'book:update_book' book.pk %}" class="btn btn-primary mt-4">編集する</a>
       <a href="{% url 'book:delete_book' book.pk %}" class="btn btn-primary mt-4">削除する</a>
       <a href="{% url 'book:review_book' book.pk %}" class="btn btn-primary mt-4">レビュー投稿</a>

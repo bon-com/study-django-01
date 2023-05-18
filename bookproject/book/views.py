@@ -1,3 +1,5 @@
+from django.core.paginator import Paginator
+from .consts import ITEM_PER_PAGE
 from django.shortcuts import render
 from .models import Book, Review
 from .forms import BookForm, ReviewForm
@@ -8,7 +10,11 @@ from django.shortcuts import redirect
 def index_view(request):
     template_name = 'book/index.html'
     book_list = Book.objects.all()
-    ctx = {'book_list': book_list}
+    paginator = Paginator(book_list, ITEM_PER_PAGE)
+    page_num = request.GET.get('page', 1)
+    page_obj = paginator.page(page_num) 
+
+    ctx = {'page_obj': page_obj}
     return render(request, template_name, ctx)
 
 def list_books(request):
