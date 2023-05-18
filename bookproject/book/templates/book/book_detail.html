@@ -7,10 +7,11 @@
     <div class="card-header">{{ book.title }}</div>
     <div class="card-body">
       <p class="card-text">{{ book.text }}</p>
-      <a href="{% url 'book:update_book' book.pk %}" class="btn btn-primary">編集する</a>
-      <a href="{% url 'book:delete_book' book.pk %}" class="btn btn-primary">削除する</a>
-      <a href="{% url 'book:review_book' book.pk %}" class="btn btn-primary">レビュー投稿</a>
-      <h6 class="card-title">{{book.category}}</h6>
+      <div><img src="{{ book.thumbnail.url }}" class="img-thumbnail"/></div>
+      <a href="{% url 'book:update_book' book.pk %}" class="btn btn-primary mt-4">編集する</a>
+      <a href="{% url 'book:delete_book' book.pk %}" class="btn btn-primary mt-4">削除する</a>
+      <a href="{% url 'book:review_book' book.pk %}" class="btn btn-primary mt-4">レビュー投稿</a>
+      <h6 class="card-title mt-4">カテゴリ：{{book.category}}</h6>
     </div>
   </div>
 {% endblock %}

@@ -8,6 +8,7 @@
 <div class="card">
     <div class="p-4 m-4 bg-light border border-success rounded">
       <h5 class="text-success">{{ book.title }}</h5>
+      <img src="{{ book.thumbnail.url }}" class="img-thumbnail"/>
       <h6>カテゴリ：{{book.category}}</h6>
       <h6>説明：{{book.text}}</h6>
       <div class="mt-3">

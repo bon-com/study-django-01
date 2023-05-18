@@ -3,7 +3,7 @@ from .models import Book, Review
 from .forms import BookForm, ReviewForm
 from django.shortcuts import redirect
 
-
+# メモ：redirectの引数にはアプリ名：URL名称を設定する
 # Create your views here.
 def index_view(request):
     template_name = 'book/index.html'
@@ -26,8 +26,7 @@ def detail_book(request, pk):
 def create_book(request):
     template_name = 'book/create_book.html'
     form = BookForm(request.POST or None)
-    ctx = {'form': form}
-    
+
     if form.is_valid():
         title = form.cleaned_data["title"]
         text = form.cleaned_data["text"]
@@ -39,6 +38,7 @@ def create_book(request):
 
         return response
     else:
+       ctx = {'form': form}
        return render(request, template_name, ctx)
 
 def delete_book(request, pk):
@@ -68,7 +68,6 @@ def update_book(request, pk):
         return response
     else:
         return render(request, template_name, ctx)
-
 
 def review_book(request, pk):
     template_name = 'book/review_form.html'

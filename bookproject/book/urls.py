@@ -1,8 +1,15 @@
 from django.urls import path
 from . import views
 
+# アプリ名
+# アプリ名をつけることで、どのアプリのどの関数を呼び出しているのか把握可能
+# ただし、アプリ名をつけると他のアプリ＞urlsもアプリ名を強制される
 app_name = 'book'
 
+# URLと関数をルーティングする
+# 第一引数：URL
+# 第二引数：関数名
+# 第三引数：URL名
 urlpatterns = [
     path('', views.index_view, name='index'),
     path('book/', views.list_books, name='list_books'),
